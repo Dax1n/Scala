@@ -49,7 +49,7 @@ class Person {
     * 
     *  private[this] var country:String=_   
     *  
-    *  private[this]后面的[this]是访问限制
+    *  private[this]后面的[this]是访问限制，只在本class中调用
     *  
     */
    private[this] var country:String=_

@@ -19,7 +19,10 @@ package com.daxin
   * 
   * 主构造器中的参数可以有默认值，如果传参的话直接覆盖
   * 
+  *构造器参数可以不带val或var，如果不带val或var的参数至少被一个方法所使用，
+  *那么它将会被提升为字段
   */
+
 class Student (val id:String,var name:String,var age:Int, address:String , var salary:Int=20000,val height:String="180"){
   
   //主构造器会执行类中定义的所有语句
@@ -27,6 +30,7 @@ class Student (val id:String,var name:String,var age:Int, address:String , var s
   println("类中定义的语句2")  
   println("类中定义的语句3")
   
+  var  gender:String=_
   
   
 }
