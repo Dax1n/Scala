@@ -12,6 +12,9 @@ object Test {
    
    
    println(uf1.getUser("Dax1n", 18))
+   
+   // t是Test的单例对象
+   val t=Test
 	 
 	 
    
