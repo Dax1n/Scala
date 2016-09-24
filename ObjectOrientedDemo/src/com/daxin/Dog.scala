@@ -15,6 +15,7 @@ private[daxin] class Dog {
 
 //反编译之后的文件class是public权限的
 //Cat后面的private是私有的构造方法，只能在期伴生对象中new
+
 private[daxin]  class  Cat private{
  
   var name:String= _
