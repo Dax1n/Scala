@@ -1,0 +1,29 @@
+//Pig 类对象分反编译文件内容：
+
+import scala.reflect.ScalaSignature;
+
+@ScalaSignature(bytes="\006\001y2A!\001\002\001\017\t\031\001+[4\013\005\r!\021!\0023bq&t'\"A\003\002\007\r|Wn\001\001\024\005\001A\001CA\005\r\033\005Q!\"A\006\002\013M\034\027\r\\1\n\0055Q!AB!osJ+g\r\003\005\020\001\t\005\r\021\"\001\021\003\021q\027-\\3\026\003E\001\"AE\013\017\005%\031\022B\001\013\013\003\031\001&/\0323fM&\021ac\006\002\007'R\024\030N\\4\013\005QQ\001\002C\r\001\005\003\007I\021\001\016\002\0219\fW.Z0%KF$\"a\007\020\021\005%a\022BA\017\013\005\021)f.\033;\t\017}A\022\021!a\001#\005\031\001\020J\031\t\021\005\002!\021!Q!\nE\tQA\\1nK\002B\001b\t\001\003\002\004%\t\001J\001\004C\036,W#A\023\021\005%1\023BA\024\013\005\rIe\016\036\005\tS\001\021\t\031!C\001U\0059\021mZ3`I\025\fHCA\016,\021\035y\002&!AA\002\025B\001\"\f\001\003\002\003\006K!J\001\005C\036,\007\005\003\0050\001\t\005\t\025!\003\022\003\035\tG\r\032:fgND\001\"\r\001\003\002\003\006I!E\001\ta\"|g.\032(v[\")1\007\001C\001i\0051A(\0338jiz\"R!N\0349si\002\"A\016\001\016\003\tAQa\004\032A\002EAQa\t\032A\002\025BQa\f\032A\002EAQ!\r\032A\002EAQ\001\020\001\005\002u\n1bZ3u!\"|g.\032(v[R\t\021\003")
+public class Pig
+{
+  private String name;
+  private int age;
+  private final String phoneNum;
+
+  public String name()
+  {
+    return this.name; } 
+  public void name_$eq(String x$1) { this.name = x$1; } 
+  public int age() { return this.age; } 
+  public void age_$eq(int x$1) { this.age = x$1; }
+
+//手动写的get方法，目的是在方法中使用phoneNum，其实生成为字段
+//但是注意，虽然生成字段了，但是其是private final类型的，所以如果要想使用的话必须提供get方法
+  public String getPhoneNum()
+  {
+    return this.phoneNum;
+  }
+//构造器，传入参数有成员变量name age 和一个非成员变量address（因为文件中没有方法使用address）
+  public Pig(String name, int age, String address, String phoneNum)
+  {
+  }
+}
