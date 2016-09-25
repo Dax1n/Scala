@@ -8,7 +8,6 @@ package com.daxin
 class Pig(var name: String, var age: Int, address: String,phoneNum: String) {
   
   def getPhoneNum():String={
-    
     phoneNum
   }
 
