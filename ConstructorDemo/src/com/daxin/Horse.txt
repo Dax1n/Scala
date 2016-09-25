@@ -1,0 +1,42 @@
+package com.daxin;
+
+import scala.collection.mutable.StringBuilder;
+import scala.reflect.ScalaSignature;
+import scala.runtime.BoxesRunTime;
+
+@ScalaSignature(bytes="\006\001-3A!\001\002\001\017\t)\001j\034:tK*\0211\001B\001\006I\006D\030N\034\006\002\013\005\0311m\\7\004\001M\021\001\001\003\t\003\0231i\021A\003\006\002\027\005)1oY1mC&\021QB\003\002\007\003:L(+\0324\t\013=\001A\021\001\t\002\rqJg.\033;?)\005\t\002C\001\n\001\033\005\021\001\"\003\013\001\001\004\005\r\021\"\001\026\003\025yf.Y7f+\0051\002CA\f\033\035\tI\001$\003\002\032\025\0051\001K]3eK\032L!a\007\017\003\rM#(/\0338h\025\tI\"\002C\005\037\001\001\007\t\031!C\001?\005IqL\\1nK~#S-\035\013\003A\r\002\"!C\021\n\005\tR!\001B+oSRDq\001J\017\002\002\003\007a#A\002yIEBaA\n\001!B\0231\022AB0oC6,\007\005C\005)\001\001\007\t\031!C\001S\005!q,Y4f+\005Q\003CA\005,\023\ta#BA\002J]RD\021B\f\001A\002\003\007I\021A\030\002\021}\013w-Z0%KF$\"\001\t\031\t\017\021j\023\021!a\001U!1!\007\001Q!\n)\nQaX1hK\002BQa\004\001\005\002Q\"2!E\0338\021\02514\0071\001\027\003\021q\027-\\3\t\013a\032\004\031\001\026\002\007\005<W\rC\003;\001\021\0051(A\004hKRt\025-\\3\025\003Y9Q!\020\002\t\002y\nQ\001S8sg\026\004\"AE \007\013\005\021\001\022\001!\024\005}B\001\"B\b@\t\003\021E#\001 \t\013\021{D\021A#\002\t5\f\027N\034\013\003A\031CQaR\"A\002!\013A!\031:hgB\031\021\"\023\f\n\005)S!!B!se\006L\b")
+public class Horse
+{
+  private String _name;
+  private int _age;
+
+  public static void main(String[] paramArrayOfString)
+  {
+    Horse..MODULE$.main(paramArrayOfString);
+  }
+
+  public String _name()
+  {
+    return this._name; } 
+  public void _name_$eq(String x$1) { this._name = x$1; } 
+  public int _age() { return this._age; } 
+  public void _age_$eq(int x$1) { this._age = x$1; }
+
+
+  public String getName()
+  {
+    return new StringBuilder().append("name :").append(_name()).append(" age:").append(BoxesRunTime.boxToInteger(_age())).toString();
+  }
+
+  public Horse()
+  {
+  }
+
+  public Horse(String name, int age)
+  {
+    this();
+
+    _name_$eq(name);
+    _age_$eq(age);
+  }
+}
