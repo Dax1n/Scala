@@ -28,6 +28,9 @@ object PartialFuncDemo {
     case _     => -1
   }
 
+  /**
+   * 练习代码
+   */
   def func3(num: String): Int = num match {
     case "one" => 1
     case "two" => 2
