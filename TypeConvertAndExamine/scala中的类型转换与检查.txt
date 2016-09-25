@@ -1,0 +1,5 @@
+ Scala									Java
+
+obj.isInstanceOf[C]						obj instanceof C
+obj.asInstanceOf[C]						(C)obj
+classOf[C]								C.class
