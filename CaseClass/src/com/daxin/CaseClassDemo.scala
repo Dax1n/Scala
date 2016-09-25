@@ -10,10 +10,10 @@ package com.daxin
 //case class是多例的，后面要跟构造参数.
 case class SubmitTask(id:String,name:String)//参数主要用来封装数据，还可以模式匹配
 
-case class HeartBeat(time:Long)
+case class HeartBeat(time:Long)////在Option类型中  Some是一个final case class
 
 //case object是单例的. case object是单例，不封装数据
-case object CheckTimeOutTask
+case object CheckTimeOutTask  //在Option类型中 None就是一个case object 单实例就可以了
 
 
 object CaseClassDemo {
