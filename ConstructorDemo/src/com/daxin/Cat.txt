@@ -1,0 +1,28 @@
+Cat的字节码分析：
+
+package com.daxin;
+
+import scala.reflect.ScalaSignature;
+
+@ScalaSignature(bytes="\006\001a2A!\001\002\001\017\t\0311)\031;\013\005\r!\021!\0023bq&t'\"A\003\002\007\r|Wn\001\001\024\005\001A\001CA\005\r\033\005Q!\"A\006\002\013M\034\027\r\\1\n\0055Q!AB!osJ+g\rC\003\020\001\021\005\001#\001\004=S:LGO\020\013\002#A\021!\003A\007\002\005!)q\002\001C\001)Q\031\021#\006\020\t\013Y\031\002\031A\f\002\t9\fW.\032\t\0031mq!!C\r\n\005iQ\021A\002)sK\022,g-\003\002\035;\t11\013\036:j]\036T!A\007\006\t\013}\031\002\031\001\021\002\007\005<W\r\005\002\nC%\021!E\003\002\004\023:$\b\"\002\023\001\t\003)\023aB4fi:\013W.\032\013\002/\035)qE\001E\001Q\005\0311)\031;\021\005IIc!B\001\003\021\003Q3CA\025\t\021\025y\021\006\"\001-)\005A\003\"\002\030*\t\003y\023\001B7bS:$\"\001M\032\021\005%\t\024B\001\032\013\005\021)f.\033;\t\013Qj\003\031A\033\002\t\005\024xm\035\t\004\023Y:\022BA\034\013\005\025\t%O]1z\001")
+public class Cat
+{
+  public static void main(String[] paramArrayOfString)
+  {
+    Cat..MODULE$.main(paramArrayOfString);
+  }
+
+  public String getName()
+  {
+    return "getName Method ";
+  }
+
+  public Cat()
+  {
+  }
+//构造方法：有参数String name, int age，但是不是成员变量
+  public Cat(String name, int age)
+  {
+    this();
+  }
+}
