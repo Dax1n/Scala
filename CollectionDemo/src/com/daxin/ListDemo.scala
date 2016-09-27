@@ -6,53 +6,53 @@ object ListDemo {
     
     val list=List(1,2,3,4,5,6,7,8);
     
-    //  paræ˜¯å°†å‡½æ•°è½¬æˆå¹¶è¡Œé›†åˆ
+    //  parÊÇ½«º¯Êı×ª³É²¢ĞĞ¼¯ºÏ
     val ls =list.par
     
     println(ls)
     
-    //lsæ˜¯å¹¶è¡Œé›†åˆï¼Œæ‰€ä»¥ä¸‹é¢è¿™ä¸ªæ±‚å’Œè¿‡ç¨‹æ˜¯å¹¶è¡Œè®¡ç®—æ±‚å’Œ
+    //lsÊÇ²¢ĞĞ¼¯ºÏ£¬ËùÒÔÏÂÃæÕâ¸öÇóºÍ¹ı³ÌÊÇ²¢ĞĞ¼ÆËãÇóºÍ
      println(" ls.reduce((x,y)=>x+y) :"+ ls.reduce((x,y)=>x+y))
      
-     //foldLeftæ˜¯éå¹¶è¡Œè®¡ç®—
+     //foldLeftÊÇ·Ç²¢ĞĞ¼ÆËã
      println("ls.sum :"+ls.foldLeft(10)(_+_))
      
      
-     println("***********èšé›†æ“ä½œ***********")
+     println("***********¾Û¼¯²Ù×÷***********")
      
       val ll=List(List(1,2,3),List(4,5,6),List(7,8))
       println(ll.flatten)
-      //0ï¼š åˆå§‹å€¼    _+_.sumä¸­ ç¬¬ä¸€ä¸ªä¸‹ç¯çº¿æ˜¯å½“å‰åˆå§‹å€¼ ç¬¬äºŒä¸ªä¸‹åˆ’çº¿æ˜¯é‡Œé¢æ¯ä¸€ä¸ªlistæ±‚å’Œ        
-      //(x,y)=>x+y ï¼šan associative operatorï¼ˆç»„åˆæ“ä½œç¬¦ï¼‰ used to combine results from different partitions
+      //0£º ³õÊ¼Öµ    _+_.sumÖĞ µÚÒ»¸öÏÂ»·ÏßÊÇµ±Ç°³õÊ¼Öµ µÚ¶ş¸öÏÂ»®ÏßÊÇÀïÃæÃ¿Ò»¸ölistÇóºÍ        
+      //(x,y)=>x+y £ºan associative operator£¨×éºÏ²Ù×÷·û£© used to combine results from different partitions
       println("ll.aggregate(0)(_+_.sum , (x,y)=>x+y) :"+ll.aggregate(0)(_+_.sum , (x,y)=>x+y))
       println("ll.aggregate(0)(_+_.sum , (x,y)=>x+y) :"+ll.aggregate(0)(_+_.sum , _+_))
       
-       println("***********èšé›†å¤æ‚æ“ä½œ***********")
+       println("***********¾Û¼¯¸´ÔÓ²Ù×÷***********")
        println("ll.par.size :"+ll.par.size)
-       println("è§£é‡Šï¼š")
-       println("ll.paræ˜¯è½¬æ¢æˆå¹¶è¡Œé›†åˆï¼Œä¹‹ååœ¨æ¯ä¸€ä¸ªå¹¶è¡Œçš„é›†åˆä¸Šåšèšé›†æ“ä½œï¼ˆè¨€å¤–ä¹‹æ„ï¼šåˆå§‹å€¼ä¼šåœ¨æ¯ä¸€ä¸ªå¹¶è¡Œé›†åˆä¸Šè¿›è¡Œèšé›†æ“ä½œï¼‰")
+       println("½âÊÍ£º")
+       println("ll.parÊÇ×ª»»³É²¢ĞĞ¼¯ºÏ£¬Ö®ºóÔÚÃ¿Ò»¸ö²¢ĞĞµÄ¼¯ºÏÉÏ×ö¾Û¼¯²Ù×÷£¨ÑÔÍâÖ®Òâ£º³õÊ¼Öµ»áÔÚÃ¿Ò»¸ö²¢ĞĞ¼¯ºÏÉÏ½øĞĞ¾Û¼¯²Ù×÷£©")
        println("ll.par.aggregate(0)(_+_.sum , _+_) :"+ll.par.aggregate(0)(_+_.sum , _+_))
-       println("å¹¶è¡Œé›†åˆçš„ä¸ªæ•°ä¸ºï¼š "+ll.par.size+" ,åœ¨æ¯ä¸€å¹¶è¡Œé›†åˆä¸ŠåŠ ä¸Šåˆå§‹å€¼10ä¹‹ååœ¨èšé›†")
+       println("²¢ĞĞ¼¯ºÏµÄ¸öÊıÎª£º "+ll.par.size+" ,ÔÚÃ¿Ò»²¢ĞĞ¼¯ºÏÉÏ¼ÓÉÏ³õÊ¼Öµ10Ö®ºóÔÚ¾Û¼¯")
        println("ll.par.aggregate(10)(_+_.sum , _+_) :"+ll.par.aggregate(10)(_+_.sum , _+_))
       
       
-      println("***********å¹¶é›†æ“ä½œ***********")
+      println("***********²¢¼¯²Ù×÷***********")
       
         val ll1=List(1,2,3,4,5,6,8,8,8)
         val ll2=List(6,7,8,9,10)
-        //ç›¸åŒå…ƒç´ ä¸ä¼šåˆ é™¤ï¼Œéƒ½ä¿ç•™
+        //ÏàÍ¬ÔªËØ²»»áÉ¾³ı£¬¶¼±£Áô
         println(ll1.union(ll2))
         
-        println("***********äº¤é›†æ“ä½œ***********")
+        println("***********½»¼¯²Ù×÷***********")
                 
         println(ll1.intersect(ll2))
 
         
-        println("***********å·®é›†æ“ä½œ***********")
+        println("***********²î¼¯²Ù×÷***********")
         //a new collection of type That which contains all elements of this list except some of occurrences of elements that also appear in that.
         //If an element value x appears n times in that, then the first n occurrences of x will not form part of the result, but any following occurrences will.
-        // æ±‚å·®è¿ç®—ï¼Œå¦‚æœthisä¸­çš„å…ƒç´ åœ¨thatä¸­å‡ºç°åˆ é™¤thisä¸­è¯¥å…ƒç´ ï¼Œä½†æ˜¯å¦‚æœthisä¸­çš„æŸä¸€å…ƒç´ å‡ºç°næ¬¡ï¼Œè€Œè¯¥å…ƒç´ åœ¨thatä¸­åªå‡ºç°ä¸€æ¬¡çš„è¯é‚£ä¹ˆç»“æœä¸­ä¼šæœ‰n-1æ¬¡è¯¥å…ƒç´ çš„å‡ºç°ï¼Œè§ä¸‹é¢ä»£ç 
-        println(ll1.diff(ll2))//ll1ä¸­æœ‰3ä¸ª8 ï¼Œthatä¸­æœ‰ä¸€ä¸ª8ï¼Œæ‰€ä»¥ç»“æœä¸­æœ‰2ä¸ª8å‡ºç°
+        // Çó²îÔËËã£¬Èç¹ûthisÖĞµÄÔªËØÔÚthatÖĞ³öÏÖÉ¾³ıthisÖĞ¸ÃÔªËØ£¬µ«ÊÇÈç¹ûthisÖĞµÄÄ³Ò»ÔªËØ³öÏÖn´Î£¬¶ø¸ÃÔªËØÔÚthatÖĞÖ»³öÏÖÒ»´ÎµÄ»°ÄÇÃ´½á¹ûÖĞ»áÓĞn-1´Î¸ÃÔªËØµÄ³öÏÖ£¬¼ûÏÂÃæ´úÂë
+        println(ll1.diff(ll2))//ll1ÖĞÓĞ3¸ö8 £¬thatÖĞÓĞÒ»¸ö8£¬ËùÒÔ½á¹ûÖĞÓĞ2¸ö8³öÏÖ
         
         
         
