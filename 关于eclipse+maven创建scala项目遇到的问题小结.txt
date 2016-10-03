@@ -1,0 +1,4 @@
+教程：http://blog.csdn.net/u010376788/article/details/50863823，可能会遇到问题：
+
+问题：could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-resources-plugin:jar:2.6
+解决方案：http://stackoverflow.com/questions/31316339/how-to-solve-maven-2-6-resource-plugin-dependency
