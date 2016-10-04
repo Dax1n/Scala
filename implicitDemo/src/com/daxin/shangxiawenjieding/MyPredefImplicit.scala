@@ -11,10 +11,19 @@ package com.daxin.shangxiawenjieding
  */
 object MyPredefImplicit {
   
-    implicit def cat2Ordered(g: Cat) = new Ordered[Cat] {
-   
-    override def compare(that: Cat): Int = {
-      g.faceValue - that.faceValue
-    }
+//函数一： 上下文界定 可以作为上下文界定的隐式转换函数  
+//    implicit def cat2Ordered(g: Cat) = new Ordered[Cat] {
+//   
+//    override def compare(that: Cat): Int = {
+//      g.faceValue - that.faceValue
+//    }
+//  }
+//    
+  //函数二也可以完成上下文界定的隐式转换
+  implicit val cat2Ordering =new Ordering[Cat]{
+      def compare(x: Cat, y: Cat): Int={
+        x.faceValue-y.faceValue
+      }
   }
+    
 }
