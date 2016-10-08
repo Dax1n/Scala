@@ -1,1 +1,2 @@
-在项目根目录执行 mvn -U -DskipTests clean package
+鏋勫缓澶辫触锛歮vn -U -DskipTests clean package 
+瑙ｅ喅鏂规
