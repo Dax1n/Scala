@@ -1,0 +1,2 @@
+以后写Spark代码可以本地运行，本地调试同之后在向集群提交
+例如包package com.daxin.localtest下的App.scala
