@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//src/cn/itcast/MissRight.scala=UTF-8
+encoding//src/cn/itcast/MyPredefGirl.scala=UTF-8
 encoding//src/com/daxin/Main.scala=UTF-8
 encoding//src/com/daxin/Pair_Ordering.scala=UTF-8
 encoding//src/com/daxin/RichFile.scala=UTF-8
@@ -7,5 +9,8 @@ encoding//src/com/daxin/fanxing/Main.scala=UTF-8
 encoding//src/com/daxin/fanxing/Main2.scala=UTF-8
 encoding//src/com/daxin/shangxiawenjieding/ChooserCat.scala=UTF-8
 encoding//src/com/daxin/shangxiawenjieding/MyPredefImplicit.scala=UTF-8
+encoding//src/com/daxin/shangxiawenjieding/exercise/Dog.scala=UTF-8
+encoding//src/com/daxin/shangxiawenjieding/exercise/DogChooser.scala=UTF-8
+encoding//src/com/daxin/shangxiawenjieding/exercise/DogPredef.scala=UTF-8
 encoding//src/com/daxin/shitujieding/Chooser.scala=UTF-8
 encoding//src/com/daxin/shitujieding/MyPredef.scala=UTF-8

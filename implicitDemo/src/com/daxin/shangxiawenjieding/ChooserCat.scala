@@ -12,6 +12,16 @@ class ChooserCat[T: Ordering] {
 
     val ord = implicitly[Ordering[T]]
       //gt 是Ordering中的方法
+    
+    //gt时候需要隐式转换，在MyPredefImplicit 中将Cat隐式转换为Ordering[Cat]
+//
+//      implicit val cat2Ordering =new Ordering[Cat]{
+//      def compare(x: Cat, y: Cat): Int={
+//        x.faceValue-y.faceValue
+//      }
+//  }
+//    在隐式转换函数中完成比较
+    
     if (ord.gt(first, second)) first else second
 
   }

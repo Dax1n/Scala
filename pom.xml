@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.daxin.spark</groupId>
-  <artifactId>sparkDemo</artifactId>
+  <groupId>com.daxin</groupId>
+  <artifactId>aaaa</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>${project.artifactId}</name>
   <description>My wonderfull scala app</description>
@@ -28,6 +28,7 @@
       <artifactId>scala-library</artifactId>
       <version>${scala.version}</version>
     </dependency>
+
     <!-- Test -->
     <dependency>
       <groupId>junit</groupId>
@@ -47,41 +48,12 @@
       <version>2.2.4</version>
       <scope>test</scope>
     </dependency>
-    <!-- Spark dependency-->
-    <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core_2.10 -->
-    <dependency>
-      <groupId>org.apache.spark</groupId>
-      <artifactId>spark-core_2.10</artifactId>
-      <version>2.0.0</version>
-    </dependency>
-
-
   </dependencies>
 
   <build>
     <sourceDirectory>src/main/scala</sourceDirectory>
     <testSourceDirectory>src/test/scala</testSourceDirectory>
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>1.2.1</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-            <configuration>
-              <transformers>
-                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>com.daxin.a.App</mainClass>
-                </transformer>
-              </transformers>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
       <plugin>
         <!-- see http://davidb.github.com/scala-maven-plugin -->
         <groupId>net.alchim31.maven</groupId>
@@ -98,6 +70,26 @@
                 <arg>-dependencyfile</arg>
                 <arg>${project.build.directory}/.scala_dependencies</arg>
               </args>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>1.2.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>com.daxin.App</mainClass>
+                </transformer>
+              </transformers>
             </configuration>
           </execution>
         </executions>
